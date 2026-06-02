@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './map.html',
   styleUrl: './map.css',
 })
-export class Map {}
+export class Map {
+  selectedCountry = '';
+
+  countryClicked(id: string, name: string) {
+    this.selectedCountry = name;
+    console.log(id);
+  }
+}
