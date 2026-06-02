@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+}
+
+.map-section {
+  width: 70%;
+}
+
+.map-section img {
+  width: 100%;
+  height: auto;
+  background-color: #e8dcc0;
+}
+
+.info-section {
+  width: 30%;
+  background-color: #f5f5dc;
+  padding: 25px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background-color: #f4e4bc;
+}
+
+.info-section h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+}
+
+body {
+  background-color: #e8dcc0;
+}
+
+.info-section {
+  background-color: #f4e4bc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
