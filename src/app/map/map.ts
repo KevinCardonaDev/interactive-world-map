@@ -19,12 +19,17 @@ export class Map {
 
   constructor(private worldBank: WorldBank) {}
 
-  countryClicked(id: string, name: string) {
-    this.selectedCountry = name;
+  countryClicked(event: MouseEvent) {
+    const target = event.target as SVGPathElement;
+    const countryCode = target.id;
 
-    this.worldBank.getCountry(id).subscribe((data: any) => {
+    if (!countryCode) {
+      return;
+    }
+
+    this.worldBank.getCountry(countryCode).subscribe((data: any) => {
       const country = data[1][0];
-
+      this.selectedCountry = country.name;
       this.countryName = country.name;
       this.capitalCity = country.capitalCity;
       this.region = country.region.value;
